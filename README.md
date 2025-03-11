@@ -1,4 +1,4 @@
-In a Minikube cluster we can run
+In a Minikube cluster we can install Apisix using a Helm Chart
 
 ```
 helm repo add apisix https://charts.apiseven.com \
@@ -13,7 +13,7 @@ helm repo add apisix https://charts.apiseven.com \
 
 There will be some issues during installation. The way I found to solve it is to delete the ingress-controller pod and then delete the dashboard pod until I see all the pods healthy
 
-After I can install keycloak
+After we have apisix up and running, we can install Keycloak
 
 ```
 kubectl apply -f keycloak.yaml
